@@ -58,3 +58,42 @@
 // }
 //
 // logInfoAbout('Sanat',1997)
+
+
+// Массивы
+
+// const cars = ['Mazda', 'Audi', 'BMW']
+// console.log(cars)
+// console.log(cars[0])
+// cars[0]= 'mercedes-benz'
+
+// Циклы
+//
+// const cars = ['Mazda', 'Audi', 'BMW']
+//
+// // for (let i = 0; i < cars.length; i++) {
+// //   const car = cars[i]
+// //   console.log(car)
+// // }
+//
+// for (let car of cars) {
+//   console.log(car)
+// }
+
+// Объекты
+
+// const person = {
+//   firstName: 'Sanat',
+//   lastName: 'Kydyrsha',
+//   year: 1997,
+//   languages: ['Ru','Kz', 'En'],
+//   single: true,
+//   greet: function () {
+//     console.log('hello who is reading it')
+//   }
+// }
+//
+// console.log(person.year)
+// person.single = false;
+// person.greet()
+// console.log(person)
