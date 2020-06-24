@@ -27,19 +27,19 @@
 // console.log(string.trimLeft())
 // console.log(string.trimRight())
 
-function logPerson(s, name, age) {
-  if (age < 0) {
-    age = 'not born yet'
-  }
-  return `${s[0]}${name}${s[1]}${s[2]}`
-}
-
-const personName = 'Sanat'
-const personName2 = 'Biga'
-const personAge = 22
-const personAge2 = -2
-
-const output = logPerson`Name: ${personName}, Age: ${personAge}!`
-const output2 = logPerson`Name: ${personName2}, Age: ${personAge2}!`
-console.log(output)
-console.log(output2)
+// function logPerson(s, name, age) {
+//   if (age < 0) {
+//     age = 'not born yet'
+//   }
+//   return `${s[0]}${name}${s[1]}${s[2]}`
+// }
+//
+// const personName = 'Sanat'
+// const personName2 = 'Biga'
+// const personAge = 22
+// const personAge2 = -2
+//
+// const output = logPerson`Name: ${personName}, Age: ${personAge}!`
+// const output2 = logPerson`Name: ${personName2}, Age: ${personAge2}!`
+// console.log(output)
+// console.log(output2)
