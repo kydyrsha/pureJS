@@ -1,9 +1,9 @@
 const cars = ['Audi', 'BMW', 'Mazda']
-const people = [
-  {name: 'Sanat', budget: 3000},
-  {name: 'Sana', budget: 3500},
-  {name: 'Sanata', budget: 2000}
-]
+// const people = [
+//   {name: 'Sanat', budget: 3000},
+//   {name: 'Sana', budget: 3500},
+//   {name: 'Sanata', budget: 2000}
+// ]
 const fib = [1, 1, 2, 3, 5, 8, 13]
 
 // cars.push('Infinity') // adds item in the end of array | method
@@ -40,3 +40,38 @@ const fib = [1, 1, 2, 3, 5, 8, 13]
 // const text = 'Hi, this is Javascript'
 // const reverseText = text.split(',').reverse()
 // console.log(reverseText);
+
+// console.log(cars.includes('Mazda')); // finds element
+
+// const upperCaseCars = cars.map(car => {
+//   return car.toUpperCase()
+// })
+
+// const pow2 = num => num ** 2
+// const sqrt = num => Math.sqrt(num)
+// // const pow2Fib = fib.map(pow2).map(sqrt) // or .map(Math.sqrt)
+// const pow2Fib = fib.map(pow2)
+// // console.log(upperCaseCars);
+// console.log(pow2Fib);
+
+const pow2 = num => num ** 2
+// const pow2Fib = fib.map(pow2)
+// const filteredNumbers = pow2Fib.filter(num => num > 20)
+// pow2Fib.filter(num => {
+//   return num > 20
+// })
+// console.log(pow2Fib);
+// console.log(filteredNumbers);
+
+const people = [
+  {name: 'Sanat', budget: 3000},
+  {name: 'Sana', budget: 3500},
+  {name: 'Sanata', budget: 2000}
+]
+
+const allBudget = people.filter(person => person.budget > 2000).reduce((acc, person) => { // advanced js chaining
+  acc += person.budget
+  return acc
+}, 0)
+
+console.log(allBudget);
