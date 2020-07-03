@@ -9,6 +9,10 @@ const person = {
   }, //or
   greet() {
     console.log('greet from person') // this way better
+  },
+  info() {
+    console.log('this', this);
+    console.info('Information about', this.name)
   }
 }
 
@@ -44,3 +48,45 @@ const person = {
 //   console.log('key:', key)
 //   console.log('value:', person[key])
 // })
+
+
+// Context
+// person.info()
+
+const logger = {
+  keys() {
+    console.log('Object Keys:', Object.keys(this))
+  },
+
+  keysAndValues() {
+    // Object.keys(this).forEach(key => { // стрелочная функция не создает собственный контекст
+    //   console.log(`"${key}": ${this[key]}`)
+    // })
+    // const self = this
+
+    Object.keys(this).forEach(function(key)  { // из-за function имеется собственный контекст
+      console.log(`"${key}": ${this[key]}`)
+    }.bind(this))
+  },
+
+  withParams(top = false, between = false, bottom = false) {
+    if (top) {
+      console.log('------------Start------------')
+    }
+    Object.keys(this).forEach((key, index, array) => { // стрелочная функция не создает собственный контекст
+      console.log(`"${key}": ${this[key]}`)
+      if (between && index !== array.length - 1) {
+        console.log('-------------')
+      }
+    })
+    if (bottom) {
+      console.log('--------End---------------')
+    }
+  }
+}
+
+// const bound = logger.keys.bind(logger)
+// bound()
+// logger.keys.call(person)
+logger.withParams.call(person, true, true, true) // независимое количество параметра
+logger.withParams.apply(person, [true, true, true]) // два параматера, второй всегда массив
