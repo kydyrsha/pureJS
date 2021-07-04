@@ -26,6 +26,7 @@
 // console.log(string.trim()) // delets unnecessary bananas(space)
 // console.log(string.trimLeft())
 // console.log(string.trimRight())
+// console.log('test')
 
 // function logPerson(s, name, age) {
 //   if (age < 0) {
